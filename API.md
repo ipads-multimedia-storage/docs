@@ -7,15 +7,15 @@ The server first sends the length of json string to client(16byte, left-aligned)
 The data structure of json is as following.
 ```json
 {
-  "speed": <Double>, // the moving speed
   "bandwidth": <Double>, // the bandwidth of network  
-  "objects": [{ // many objects at the same time
+  "object": { // one object each time
     	"id": <Long>, // id of the object
     	"time": <Long>, // time related to the location
+    	"speed": <Double>, // the moving speed
     	"x": <Double>, // location x
     	"y": <Double>, // location y
     	"angle": <Double>, // angle of the object
-	}],
+	},
 }
 ```
 
